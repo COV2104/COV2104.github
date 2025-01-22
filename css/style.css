@@ -1,0 +1,112 @@
+/* Переменные */
+:root {
+    --color-green: #76bc21;
+    --color-white: #fff;
+    --background-black-opasity: rgb(0, 0, 0, 50%);
+}
+
+/* общие стили */
+a {
+    color: var(--color-green);
+    text-decoration: none;
+    transition-timing-function: opasity .25s ease;
+}
+
+a:hover {
+    opacity: 70%;
+}
+
+
+/* header стили */
+
+.header {
+    position: relative;
+    height: 110vh;
+    background: url(../image/headerImg.jpg) center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 83%);
+}
+
+.header-background {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+
+    background: var(--background-black-opasity);
+
+    z-index: 1;
+}
+
+.header-top {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 80px;
+
+    background-color: var(--background-black-opasity);
+    z-index: 2;
+}
+
+.header-top a {
+    color: var(--color-white);
+}
+
+.header-top a:hover {
+    color: var(--color-green);
+}
+
+.header-top a.active {
+    color: var(--color-green);
+}
+
+.logo {
+    font-size: 36px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-white);
+}
+
+.menu-element {
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.menu-element:last-child {
+    margin-right: 0;
+}
+
+.header-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+
+    color: var(--color-white);
+    z-index: 2;
+}
+
+.header-center__wrapper {
+    width: 100%;
+    padding: 20px 0;
+
+    background: var(--background-black-opasity);
+    text-align: center;
+}
+
+.name {
+    font-size: 56px;
+    line-height: 70px;
+}
+
+.description {
+    font-size: 26px;
+}

@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Визитка тест</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="header">
+      <div class="header-background"></div>
       <div class="header-top">
-        <span class="logo">Логотип</span>
+        <a href="/index.html" class="logo">LOGO</a>
         <nav class="navigation">
           <ul class="menu">
             <li class="menu-element">
-              <a href="#" class="menu-element__link">Домой</a>
+              <a href="#" class="menu-element__link active">Домой</a>
             </li>
             <li class="menu-element">
               <a href="#" class="menu-element__link">Обо мне</a>
@@ -39,10 +42,12 @@
         </nav>
       </div>
       <div class="header-center">
-        <h1 class="name">Шевчук&nbsp;Виталий</h1>
-        <p class="description">
-          Привет! Меня зовут Виталий. Я веб-разработчик, давайте знакомиться!
-        </p>
+        <div class="header-center__wrapper">
+          <h1 class="name">Шевчук&nbsp;Виталий</h1>
+          <p class="description">
+            Привет! Меня зовут Виталий. Я веб-разработчик, давайте знакомиться!
+          </p>
+        </div>
       </div>
     </header>
 
@@ -532,17 +537,24 @@
       <form action="" class="contact-me__form">
         <div class="input-wrapper">
           <label for="name" class="label">Имя</label>
-          <input type="text" id="name" class="input" required/>
+          <input type="text" id="name" class="input" required />
         </div>
 
         <div class="input-wrapper">
           <label for="email" class="label">E-mail</label>
-          <input type="email" id="email" class="input" required/>
+          <input type="email" id="email" class="input" required />
         </div>
 
         <div class="textarea-wrapper">
           <label for="mesage" class="label">Сообщение</label>
-          <textarea name="mesage" id="mesage" cols="30" rows="10" class="textarea" required></textarea>
+          <textarea
+            name="mesage"
+            id="mesage"
+            cols="30"
+            rows="10"
+            class="textarea"
+            required
+          ></textarea>
         </div>
 
         <button type="submit" class="submit">Отправить</button>
