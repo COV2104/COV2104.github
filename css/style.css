@@ -6,14 +6,20 @@
 }
 
 /* общие стили */
-a {
+a.link {
     color: var(--color-green);
     text-decoration: none;
     transition-timing-function: opasity .25s ease;
 }
 
-a:hover {
+a.link:hover {
     opacity: 70%;
+}
+
+.block-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -21,6 +27,7 @@ a:hover {
 
 .header {
     position: relative;
+    bottom: 80px;
     height: 110vh;
     background: url(../image/headerImg.jpg) center;
     background-size: cover;
@@ -38,38 +45,29 @@ a:hover {
 }
 
 .header-top {
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 
     height: 80px;
 
     background-color: var(--background-black-opasity);
-    z-index: 2;
+    z-index: 3;
 }
 
-.header-top a {
+.header-top a.link {
     color: var(--color-white);
-}
-
-.header-top a:hover {
-    color: var(--color-green);
-}
-
-.header-top a.active {
-    color: var(--color-green);
 }
 
 .logo {
     font-size: 36px;
+    padding-right: 200px;
+    padding-left: 50px;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     color: var(--color-white);
 }
 
@@ -82,12 +80,19 @@ a:hover {
     margin-right: 0;
 }
 
+.menu-element a.link.active, .menu-element a.link:hover {
+    color: var(--color-green);
+}
+
+.menu-element .home svg {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
 .header-center {
     position: relative;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: calc(100vh - 80px);
 
     color: var(--color-white);
@@ -108,5 +113,33 @@ a:hover {
 }
 
 .description {
+    display: inline-block;
+    width: 69ch;
     font-size: 26px;
+    line-height: 1.5em;
+    font-family: Courier, monospace;
+    white-space: nowrap;
+    border-right: 3px solid transparent;
+    overflow: hidden;
+    animation: cursor .75s 7s, print-text 6s steps(69);
+}
+
+@keyframes cursor {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--color-white);
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes print-text {
+    from {
+        width: 0;
+    }
 }
