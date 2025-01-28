@@ -6,6 +6,7 @@
     --color-text: #7a7a7a;
     --color-black: #262626;
     --background-black-opasity: rgb(0, 0, 0, 50%);
+    --background-grey: #f2efefeb;
 }
 
 /* header стили */
@@ -135,6 +136,7 @@
 .about-me {
     display: flex;
     align-items: center;
+    padding-bottom: 60px;
 }
 
 .about-me .left {
@@ -194,6 +196,58 @@ ul.about-me__extra {
     margin-right: 10px;
 }
 
+/* секция достижения */
+
+.achievements {
+    flex-direction: column;
+    padding: 40px 0;
+    position: relative;
+}
+
+.achievements:before,
+.achievements:after {
+    content: "";
+    position: absolute;
+    border: 80px solid transparent;
+}
+
+.achievements:before {
+    border-top: 40px solid #fff;
+    top: 0;
+}
+
+.achievements:after {
+    border-top: 40px solid var(--background-grey);
+    bottom: -120px;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+}
+
+.slider__wrapper {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 80%;
+}
+
+.slider__link {
+    flex: 1 1 33%;
+}
+
+.slider__image {
+    width: 100%;
+    max-width: 250px;
+}
+
+/* секция навыки */
+
+.skills {
+    padding: 60px 0 40px;
+}
+
 /* секция интересы */
 
 .interests {
@@ -222,13 +276,13 @@ ul.about-me__extra {
     margin-bottom: 20px;
 }
 
-.interest-title{
+.interest-title {
     margin-bottom: 10px;
     font-size: 20px;
     color: var(--color-black);
 }
 
-.interest-text{
+.interest-text {
     color: var(--color-text);
     margin-bottom: 10px;
 }
@@ -280,4 +334,31 @@ a.link:hover {
     position: absolute;
     bottom: -7px;
     left: calc(50% - var(--underline-width) / 2);
+}
+
+.section-grey {
+    background: var(--background-grey);
+}
+
+/* стили для слайдера */
+
+.slider {
+    display: flex;
+    width: 100%;
+}
+
+.slider__wrapper {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 80%;
+}
+
+.slider__link {
+    flex: 1 1 33%;
+}
+
+.slider__image {
+    width: 100%;
+    max-width: 250px;
 }
